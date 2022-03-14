@@ -4,24 +4,24 @@ from time import sleep
 
 list = [(1, "Mario"),(2, "Pikachu"),(3, "Peach"),(4, "Luigi"),(5, "Morty"),(6, "Rick"),(7, "Bowser")]
 
-player1Character = ""
-player2Character = ""
-player1Health = 60
-player2Health = 60
-player1Magic = 0
-player2Magic = 0
-player1Potions = 1
-player2Potions = 1
-player1Red = 1
-player2Red = 1
-player1Blue = 1
-player2Blue = 1
-player1Attack = 1
-player2Attack = 1
-player1Defense = 0
-player2Defense = 0
-player1Green = 1
-player2Green = 1
+# player1Character = ""
+# player2Character = ""
+# player1Health = 60
+# player2Health = 60
+# player1Magic = 0
+# player2Magic = 0
+# player1Potions = 1
+# player2Potions = 1
+# player1Red = 1
+# player2Red = 1
+# player1Blue = 1
+# player2Blue = 1
+# player1Attack = 1
+# player2Attack = 1
+# player1Defense = 0
+# player2Defense = 0
+# player1Green = 1
+# player2Green = 1
 
 
 def init():
@@ -180,6 +180,7 @@ def loop3():
         checkSurrender1()
     else:
         print("Please enter valid input")
+        loop3()
         
 def player2Turn():
     clear()
@@ -225,6 +226,7 @@ def loop4():
         checkSurrender2()
     else:
         print("Please enter valid input")
+        loop4()
 
 def startGame():
 
@@ -312,7 +314,7 @@ def special1():
         if(player1Character == "Bowser"):
                     print("")
                     print(player1Character + " steals "+ player2Character+"'s house key!")
-                    print(player2Character + " loses "+ str(player1Attack * 20 - player2Defense * 5) +" HPs and his sense of security!")
+                    print(player2Character + " loses "+ str(player1Attack * 20 - player2Defense * 5) +" HPs and their sense of security!")
                     print("")
                     player2Health = player2Health - ((player1Attack * 20) - (player2Defense * 5))
     
